@@ -1,0 +1,36 @@
+{
+  "name": "gofreta-js-client",
+  "version": "0.1.0",
+  "description": "Gofreta JavaScript API Client",
+  "main": "src/index.js",
+  "keywords": [
+    "gofreta",
+    "api",
+    "client",
+    "gofretaapi",
+    "gofreta-api",
+    "gofretaclient",
+    "gofreta-client"
+  ],
+  "author": "Gani Georgiev <gani.georgiev@gmail.com>",
+  "license": "BSD-3",
+  "scripts": {
+    "build": "webpack",
+    "test": "mocha-webpack --webpack-config webpack-test.config.js \"tests/**/*.spec.js\" || true",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.17.1"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.13.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1",
+    "mocha-webpack": "^1.0.1",
+    "webpack": "^3.10.0"
+  }
+}
