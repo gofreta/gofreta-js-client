@@ -31,7 +31,7 @@ const BaseResource = require('@/BaseResource');
 
         // load all resources
         var resourceClass = null;
-        var resourcesContext = require.context('./resources/', true, /\.(js)@/);
+        var resourcesContext = require.context('./resources/', true, /\.(js)$/);
         resourcesContext.keys().forEach((file) => {
             resourceClass = resourcesContext(file);
             if (resourceClass && resourceClass.prototype instanceof BaseResource) {

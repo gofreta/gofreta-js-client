@@ -1,8 +1,8 @@
 {
-  "name": "gofreta-js-client",
+  "name": "gofreta-client",
   "version": "0.1.0",
   "description": "Gofreta JavaScript API Client",
-  "main": "src/index.js",
+  "main": "dist/client.min.js",
   "keywords": [
     "gofreta",
     "api",

@@ -38,15 +38,15 @@ module.exports = class Media extends BaseResource {
 
     /**
      * @param  {Number} id
-     * @param  {String} name
+     * @param  {String} title
      * @param  {String} description
      * @param  {Object} [bodyParams]
      * @param  {Object} [queryParams]
      * @return {Promise}
      */
-    update(id, name, description, bodyParams = {}, queryParams = {}) {
+    update(id, title, description, bodyParams = {}, queryParams = {}) {
         var data = Object.assign({
-            'name':        name,
+            'title':       title,
             'description': description,
         }, bodyParams);
 
