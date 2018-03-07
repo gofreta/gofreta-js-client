@@ -101,5 +101,7 @@ List with available resources (each returns a `Promise` object):
 
 
 ## Credits
+
 Gofreta JS API client is part from [Gofreta](https://gofreta.com) - an Open Source project licensed under the [BSD3-License](LICENSE.md).
+
 Help us improve and continue the project development - [https://gofreta.com/support-us](https://gofreta.com/support-us)
