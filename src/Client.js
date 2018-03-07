@@ -43,7 +43,8 @@ const BaseResource = require('@/BaseResource');
     /**
      * Sets authorization token.
      *
-     * @param {String} token
+     * @param  {String} token
+     * @return {Client}
      */
     setToken(token = '') {
         this.$token = token;
@@ -57,5 +58,7 @@ const BaseResource = require('@/BaseResource');
         } else if (this.$http.defaults.headers.common['Authorization']) {
             delete this.$http.defaults.headers.common['Authorization'];
         }
+
+        return this;
     }
 }

@@ -50,7 +50,7 @@ describe('Media', function () {
         it('Should correctly set request data', function (done) {
             var bodyParams  = {'body_test1': 1, 'body_test2': 2};
             var queryParams = {'query_test1': 1, 'query_test2': 2};
-            var result      = resource.update('myid', 'myname', 'mydescription', bodyParams, queryParams);
+            var result      = resource.update('myid', 'mytitle', 'mydescription', bodyParams, queryParams);
 
             assert.instanceOf(result, Promise);
             result.then(function (response) {
@@ -58,7 +58,7 @@ describe('Media', function () {
                 assert.equal(response.config.method, 'put');
                 assert.deepEqual(response.config.params, queryParams);
                 assert.deepEqual(JSON.parse(response.config.data), Object.assign({}, bodyParams, {
-                    'name':        'myname',
+                    'title':       'mytitle',
                     'description': 'mydescription',
                 }));
             }).then(done).catch(done);

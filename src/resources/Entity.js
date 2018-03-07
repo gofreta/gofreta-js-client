@@ -19,7 +19,7 @@ module.exports = class Entity extends BaseResource {
 
         return this.$http({
             'method': 'get',
-            'url':    '/collections/' + collectionIdentifier + '/entities',
+            'url':    '/collections/' + encodeURIComponent(collectionIdentifier) + '/entities',
             'params': queryParams
         });
     }
@@ -33,7 +33,7 @@ module.exports = class Entity extends BaseResource {
     getOne(collectionIdentifier, id, queryParams = {}) {
         return this.$http({
             'method': 'get',
-            'url':    '/collections/' + collectionIdentifier + '/entities/' + id,
+            'url':    '/collections/' + encodeURIComponent(collectionIdentifier) + '/entities/' + encodeURIComponent(id),
             'params': queryParams
         });
     }
@@ -47,7 +47,7 @@ module.exports = class Entity extends BaseResource {
     create(collectionIdentifier, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method': 'post',
-            'url':    '/collections/' + collectionIdentifier + '/entities',
+            'url':    '/collections/' + encodeURIComponent(collectionIdentifier) + '/entities',
             'params': queryParams,
             'data':   bodyParams
         });
@@ -63,7 +63,7 @@ module.exports = class Entity extends BaseResource {
     update(collectionIdentifier, id, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method': 'put',
-            'url':    '/collections/' + collectionIdentifier + '/entities/' + id,
+            'url':    '/collections/' + encodeURIComponent(collectionIdentifier) + '/entities/' + encodeURIComponent(id),
             'params': queryParams,
             'data':   bodyParams
         });
@@ -79,7 +79,7 @@ module.exports = class Entity extends BaseResource {
     delete(collectionIdentifier, id, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method': 'delete',
-            'url':    '/collections/' + collectionIdentifier + '/entities/' + id,
+            'url':    '/collections/' + encodeURIComponent(collectionIdentifier) + '/entities/' + encodeURIComponent(id),
             'params': queryParams,
             'data':   bodyParams
         });

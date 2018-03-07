@@ -60,7 +60,7 @@ module.exports = class Auth extends BaseResource {
 
         return this.$http({
             'method': 'post',
-            'url':    '/reset-password/' + resetPasswordHash,
+            'url':    '/reset-password/' + encodeURIComponent(resetPasswordHash),
             'params': queryParams,
             'data':   data
         });

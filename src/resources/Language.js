@@ -31,7 +31,7 @@ module.exports = class Language extends BaseResource {
     getOne(id, queryParams = {}) {
         return this.$http({
             'method':  'get',
-            'url':     '/languages/' + id,
+            'url':     '/languages/' + encodeURIComponent(id),
             'params':  queryParams
         });
     }
@@ -59,7 +59,7 @@ module.exports = class Language extends BaseResource {
     update(id, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method':  'put',
-            'url':     '/languages/' + id,
+            'url':     '/languages/' + encodeURIComponent(id),
             'params':  queryParams,
             'data':    bodyParams
         });
@@ -74,7 +74,7 @@ module.exports = class Language extends BaseResource {
     delete(id, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method':  'delete',
-            'url':     '/languages/' + id,
+            'url':     '/languages/' + encodeURIComponent(id),
             'params':  queryParams,
             'data':    bodyParams
         });

@@ -31,7 +31,7 @@ module.exports = class Collection extends BaseResource {
     getOne(identifier, queryParams = {}) {
         return this.$http({
             'method':  'get',
-            'url':     '/collections/' + identifier,
+            'url':     '/collections/' + encodeURIComponent(identifier),
             'params':  queryParams
         });
     }
@@ -59,7 +59,7 @@ module.exports = class Collection extends BaseResource {
     update(identifier, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method':  'put',
-            'url':     '/collections/' + identifier,
+            'url':     '/collections/' + encodeURIComponent(identifier),
             'params':  queryParams,
             'data':    bodyParams
         });
@@ -74,7 +74,7 @@ module.exports = class Collection extends BaseResource {
     delete(identifier, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method':  'delete',
-            'url':     '/collections/' + identifier,
+            'url':     '/collections/' + encodeURIComponent(identifier),
             'params':  queryParams,
             'data':    bodyParams
         });

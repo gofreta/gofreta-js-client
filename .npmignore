@@ -1,7 +1,5 @@
 src
 tests
-
 .babelrc
-
 webpack-test.config.js
 webpack.config.js

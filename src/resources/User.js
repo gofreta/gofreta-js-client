@@ -31,7 +31,7 @@ module.exports = class User extends BaseResource {
     getOne(id, queryParams = {}) {
         return this.$http({
             'method':  'get',
-            'url':     '/users/' + id,
+            'url':     '/users/' + encodeURIComponent(id),
             'params':  queryParams
         });
     }
@@ -43,10 +43,10 @@ module.exports = class User extends BaseResource {
      */
     create(bodyParams = {}, queryParams = {}) {
         return this.$http({
-            'method':  'post',
-            'url':     '/users',
-            'params':  queryParams,
-            'data':    bodyParams
+            'method': 'post',
+            'url':    '/users',
+            'params': queryParams,
+            'data':   bodyParams
         });
     }
 
@@ -58,10 +58,10 @@ module.exports = class User extends BaseResource {
      */
     update(id, bodyParams = {}, queryParams = {}) {
         return this.$http({
-            'method':  'put',
-            'url':     '/users/' + id,
-            'params':  queryParams,
-            'data':    bodyParams
+            'method': 'put',
+            'url':    '/users/' + encodeURIComponent(id),
+            'params': queryParams,
+            'data':   bodyParams
         });
     }
 
@@ -73,10 +73,10 @@ module.exports = class User extends BaseResource {
      */
     delete(id, bodyParams = {}, queryParams = {}) {
         return this.$http({
-            'method':  'delete',
-            'url':     '/users/' + id,
-            'params':  queryParams,
-            'data':    bodyParams
+            'method': 'delete',
+            'url':    '/users/' + encodeURIComponent(id),
+            'params': queryParams,
+            'data':   bodyParams
         });
     }
 }

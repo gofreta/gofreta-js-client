@@ -31,7 +31,7 @@ module.exports = class Media extends BaseResource {
     getOne(id, queryParams = {}) {
         return this.$http({
             'method':  'get',
-            'url':     '/media/' + id,
+            'url':     '/media/' + encodeURIComponent(id),
             'params':  queryParams
         });
     }
@@ -52,7 +52,7 @@ module.exports = class Media extends BaseResource {
 
         return this.$http({
             'method':  'put',
-            'url':     '/media/' + id,
+            'url':     '/media/' + encodeURIComponent(id),
             'params':  queryParams,
             'data':    data
         });
@@ -67,7 +67,7 @@ module.exports = class Media extends BaseResource {
     delete(id, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method':  'delete',
-            'url':     '/media/' + id,
+            'url':     '/media/' + encodeURIComponent(id),
             'params':  queryParams,
             'data':    bodyParams
         });

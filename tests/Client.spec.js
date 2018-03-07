@@ -43,8 +43,9 @@ describe('Client', function () {
     describe('setToken()', function () {
         it('Should successfully set an authorization token and header', function () {
             var client = new Client('test_base_url');
-            client.setToken('test_token');
+            var result = client.setToken('test_token');
 
+            assert.instanceOf(result, Client);
             assert.equal(client.$token, 'test_token');
             assert.equal(client.$http.defaults.headers.common['Authorization'], 'Bearer test_token');
         });
@@ -57,9 +58,10 @@ describe('Client', function () {
             assert.equal(client.$http.defaults.headers.common['Authorization'], 'Bearer test_token');
 
             // unset the token and header
-            client.setToken('');
+            var result = client.setToken('');
 
             // verify that the client doesn't have defined auth token and header
+            assert.instanceOf(result, Client);
             assert.equal(client.$token, '');
             assert.isUndefined(client.$http.defaults.headers.common['Authorization']);
         });

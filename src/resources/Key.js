@@ -31,7 +31,7 @@ module.exports = class Key extends BaseResource {
     getOne(id, queryParams = {}) {
         return this.$http({
             'method':  'get',
-            'url':     '/keys/' + id,
+            'url':     '/keys/' + encodeURIComponent(id),
             'params':  queryParams
         });
     }
@@ -59,7 +59,7 @@ module.exports = class Key extends BaseResource {
     update(id, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method':  'put',
-            'url':     '/keys/' + id,
+            'url':     '/keys/' + encodeURIComponent(id),
             'params':  queryParams,
             'data':    bodyParams
         });
@@ -74,7 +74,7 @@ module.exports = class Key extends BaseResource {
     delete(id, bodyParams = {}, queryParams = {}) {
         return this.$http({
             'method':  'delete',
-            'url':     '/keys/' + id,
+            'url':     '/keys/' + encodeURIComponent(id),
             'params':  queryParams,
             'data':    bodyParams
         });

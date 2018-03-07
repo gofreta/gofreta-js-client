@@ -1,6 +1,6 @@
 {
   "name": "gofreta-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Gofreta JavaScript API Client",
   "main": "dist/client.min.js",
   "keywords": [
@@ -17,7 +17,7 @@
   "scripts": {
     "build": "webpack",
     "test": "mocha-webpack --webpack-config webpack-test.config.js \"tests/**/*.spec.js\" || true",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "axios": "^0.17.1"
