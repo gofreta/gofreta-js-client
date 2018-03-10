@@ -1,7 +1,7 @@
 Gofreta JS API client
 ======================================================================
 
-> **The project is still in very early development stage and it is not recommended to use in production environment, unless you really know what you are doing!**
+> **The project is still in very early stage of development and is not recommended to be used in production environment, unless you really know what you are doing!**
 
 Simple and compact (~5kb gzip) Gofreta JS API client for the browser and node.js (based on [axios](https://github.com/axios/axios) HTTP client).
 
