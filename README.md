@@ -23,7 +23,7 @@ import Client from 'gofreta-client'
 ```
 
 #### Manual
-```bash
+```html
 <script src="/path/to/dist/client.min.js"></script>
 ```
 
@@ -41,7 +41,7 @@ clientInst.Auth.Login("username", "password").then(function (data) {
 
 
 ## Development
-```js
+```bash
 # build and minify for production
 npm run build
 
