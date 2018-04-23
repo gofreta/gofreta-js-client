@@ -4,7 +4,6 @@ const mockAdapter  = require ('axios-mock-adapter');
 const Client       = require('@/Client');
 const BaseResource = require('@/BaseResource');
 
-
 /**
  * Client API tests.
  *
